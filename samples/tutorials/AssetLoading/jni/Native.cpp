@@ -31,8 +31,8 @@
 #include "Matrix.h"
 
 /* [New includes and global variables.] */
-#include <assimp/cimport.h>
-#include <assimp/scene.h>
+#include "../assimp/include/assimp/cimport.h"
+#include "../assimp/include/assimp/scene.h"
 #include <vector>
 
 /* The global Assimp scene object. */
@@ -180,7 +180,7 @@ bool setupGraphics(int width, int height)
 
     /* [Load a model into the Open Asset Importer.] */
     std::string sphere = "s 0 0 0 10";
-    scene = aiImportFileFromMemory(sphere.c_str(), sphere.length(), 0, ".nff");
+    // scene = aiImportFileFromMemory(sphere.c_str(), sphere.length(), 0, ".nff");
 
     if(!scene)
     {
